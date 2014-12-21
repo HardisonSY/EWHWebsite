@@ -63,6 +63,32 @@
                width: 1em;
                height: 1em;
         }*/
+        .img-icon {
+            width: 70%;
+            color: white;
+            margin: 0 auto;
+
+        }
+        .img-icon[src*="repair"] {
+            width: 50%;
+        }
+        .img-iconback {
+            width: 120px;
+            height: 120px;
+            background-color: dodgerblue;
+            border-radius: 50%;
+        }
+        .valign-parent {
+            display: table;
+            table-layout: fixed;
+        }
+
+        .valign-child {
+            display:table-cell;
+            vertical-align:middle;
+            text-align:center;
+        }
+
     </style>
 
 </head>
@@ -177,32 +203,50 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-7 col-md-offset-1">
+            <div class="col-md-7 col-md-offset-1 col-md-push-4">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
                 <h2 class="section-heading">我們在做什麼？</h2>
                 <div class="row">
                     <div class="col-sm-3">
-                        <img src="" alt=""/>
+                        <div class="img-iconback valign-parent">
+                            <div class="valign-child">
+                                <img class="img-responsive img-icon" src="./img/icon/education.svg" alt=""/>
+                            </div>
+                        </div>
                         <h3>教育訓練</h3>
                         <p>提供學生機會去學習全球健康議題、釐清問題的能力、發展設計、溝通及團隊合作的技巧，並熟悉其他文化。</p>
                     </div>
                     <div class="col-sm-3">
-                        <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                        <div class="img-iconback valign-parent">
+                            <div class="valign-child">
+                                <img class="img-responsive img-icon" src="./img/icon/repair.svg" alt=""/>
+                            </div>
+                        </div>
                         <h3>儀器維修</h3>
                         <p>協助開發中國家建立自行維修醫療儀器的能力。</p>
                     </div>
                     <div class="col-sm-3">
+                        <div class="img-iconback valign-parent">
+                            <div class="valign-child">
+                                <img class="img-responsive img-icon" src="./img/icon/global.svg" alt=""/>
+                            </div>
+                        </div>
                         <h3>溝通能力培養</h3>
                         <p>英語寫作、溝通技巧訓練。</p>
                     </div>
                     <div class="col-sm-3">
+                        <div class="img-iconback valign-parent">
+                            <div class="valign-child">
+                                <img class="img-responsive img-icon" src="./img/icon/medical.svg" alt=""/>
+                            </div>
+                        </div>
                         <h3>醫療援助</h3>
                         <p>動員生物醫學工程組織，到資源不足的國家改善醫療品質。</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-md-pull-8">
                 <img class="img-responsive" src="img/dog.png" alt="">
             </div>
         </div>
@@ -296,7 +340,7 @@
             <div class="col-lg-12">
                 <ul class="list-inline">
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
@@ -319,6 +363,7 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
