@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
 
@@ -88,6 +88,17 @@
             vertical-align:middle;
             text-align:center;
         }
+        @media screen and (min-width: 970px) {
+            h1 > br {
+                display: none;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .vertical-align {
+                display: flex;
+                align-items: center;
+            }
+        }
 
     </style>
 
@@ -108,7 +119,7 @@
             </button>
             <!-- Logo -->
             <a class="navbar-brand" href="#">
-                <img style="max-width:95px; margin-top: -20px" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界醫學工程 中原分會 Engineering World Health at CYCU">
+                <img style="max-width:95px; margin-top: -20px" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界衛生工程 中原分會 Engineering World Health at CYCU">
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -135,14 +146,13 @@
 
 <!-- Header -->
 <div class="intro-header">
-
     <div class="container">
 
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
-                    <img style="max-width:95px; margin-top: -20px; display: inline;" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界醫學工程 中原分會 Engineering World Health at CYCU">
-                    <h1 style="display: inline;">世界醫學工程 <small style="color: white;">中原大學分會</small></h1>
+                    <img style="max-width:95px; margin-top: -20px; display: inline;" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界衛生工程 中原分會 Engineering World Health at CYCU">
+                    <h1 style="display: inline;">世界衛生工程 <br><small style="color: white;">中原大學分會</small></h1>
                     <h3>Engineering World Health at CYCU</h3>
                     <hr class="intro-divider">
                     <blockquote>
@@ -188,7 +198,7 @@
                 </blockquote>
             </div>
             <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="img/ipad.png" alt="">
+                <img class="img-responsive" src="img/aboutus.png" alt="">
             </div>
         </div>
 
@@ -202,7 +212,7 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row vertical-align">
             <div class="col-md-7 col-md-offset-1 col-md-push-4">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
@@ -247,7 +257,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-md-pull-8">
-                <img class="img-responsive" src="img/dog.png" alt="">
+                <img class="img-responsive" src="img/wedo.jpg" alt="">
             </div>
         </div>
 
