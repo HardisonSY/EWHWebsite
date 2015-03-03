@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>研究計畫</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /* Default
+         *     Background
+         *         color: #fff;
+         *     Font
+         *         size: 14px; 
+         *         color: #5e5e5e;      
+         * ============================= */
+
+        body {
+            color: #5e5e5e;
+        }
+
+        ::-moz-selection {
+            background: dodgerblue;
+            color: #f7f7f7;
+        }
+
+        ::selection {
+            background: dodgerblue;
+            color: #f7f7f7;
+        }
+
+        #project {
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        ul,
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .abgne_tab {
+            position: relative;
+            height: 100vh;
+            padding: 70px 20px 0;
+        }
+
+        .tabsContainer {
+            height: 40px;
+        }
+
+        .slidesContainer {
+            /* Height 剩下的 10% 為 .tabscontainer 及留白部分 */
+            height: 90%;
+            padding: 5% 0;
+            color: #f7f7f7;
+            background-color: #2d3539;
+            overflow: hidden;
+        }
+
+        .slideImg img {
+            max-width: 100%;
+            padding: 5%;
+        }
+
+        .tabsContainer li {
+            display: inline-block;
+            height: 100%;
+            min-width: 100px;
+            padding: 10px 12px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #ececec;
+        }
+
+        .tabsContainer li a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .tabsContainer li a:hover {
+            color: #000;
+        }
+
+        .tabsContainer li.active {
+            background-color: #2d3539;
+        }
+
+        .tabsContainer li.active a,
+        .tabsContainer li.active a:hover {
+            color: #f7f7f7;
+        }
+
+        .prev, 
+        .next {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            padding: 10px 10px 15px;
+            font-size: 3em;
+            color: #f7f7f7;
+            background-color: #000;
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+        }
+
+        .prev {
+            border-radius: 0 5px 5px 0;
+            left: 20px;
+        }
+
+        .next {
+            border-radius: 5px 0 0 5px;
+            right: 20px;
+        }
+
+        .prev:hover, 
+        .next:hover {
+            cursor: pointer;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+
+        @media screen and (max-width: 768px) {
+            .abgne_tab {
+                padding: 0;
+            }
+
+            .slidesContainer {
+                height: 100%;
+                padding-top: 15%;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!-- Logo -->
+            <a class="navbar-brand page-scroll" href="index.html">
+                <img style="max-width:95px; margin-top: -20px" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界衛生工程 中原分會 Engineering World Health at CYCU">
+            </a>
+        </div>
+    </nav>
+    <!-- /.container -->
+        
+    <div id="project">
+
+        <div class="abgne_tab">
+            <ul class="tabsContainer hidden-xs">
+                <li><a href="#slide1">男丁格爾</a></li>
+                <li><a href="#slide2">jQuery</a></li>
+                <li><a href="#slide3">懂了沒有</a></li>
+                <li><a href="#slide4">你是不認識</a></li>
+            </ul>
+     
+            <div class="slidesContainer">
+                <div id="slide1" class="tab_content row">
+                    <div class="col-lg-4 
+                                col-md-6 
+                                col-sm-8 
+                                col-xs-10 
+                                col-lg-offset-4
+                                col-md-offset-3 
+                                col-sm-offset-2 
+                                col-xs-offset-1">
+                        <h2 class="text-center">關於作者</h2>
+                        <p>目前工作是網頁開發為主，因此針對了 HTML, JavaScript, CSS 等知識特別深入研究。若有任何問題，歡迎直接留言或是透過 Mail 討論。</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="text-center slideImg img-responsive">
+                        <img src="img/testimg1.jpg" alt="">
+                    </div>
+                </div>
+                <div id="slide2" class="tab_content row">
+                    <div class="col-md-4 
+                                col-sm-8
+                                col-xs-10
+                                col-md-offset-1
+                                col-sm-offset-2
+                                col-xs-offset-1">
+                        <h2 class="text-center">jQuery</h2>
+                        <p>jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating.</p>
+                    </div>
+                    <div class="col-md-7
+                                col-sm-8
+                                col-xs-10
+                                col-md-offset-0
+                                col-sm-offset-2
+                                col-xs-offset-1
+                                slideImg
+                                img-responsive">
+                        <img src="img/testimg2.jpg" alt="">
+                    </div>
+                </div>
+                <div id="slide3" class="tab_content row">
+                    <div class="col-md-4 
+                                col-sm-8
+                                col-xs-10
+                                col-md-offset-1
+                                col-sm-offset-2
+                                col-xs-offset-1">
+                        <h2 class="text-center">懂了沒有</h2>
+                        <p>我以為他早到海邊摸魚去了。今天的運氣仍舊不見佳，將手一放。盧矢，者乎。我只是悵惘。理當感到的害怕滋味。不肯計較，肉在那裡。不斷反覆地用機械臂？你的話。又想起祖母。可惜，但又誰知道，便可以買一碟鹽煮筍。</p>
+                    </div>
+                    <div class="col-md-7
+                                col-sm-8
+                                col-xs-10
+                                col-md-offset-0
+                                col-sm-offset-2
+                                col-xs-offset-1
+                                slideImg
+                                img-responsive">
+                        <img src="img/testimg3.jpg" alt="">
+                    </div>
+                </div>
+                <div id="slide4" class="tab_content row">
+                    <div class="col-lg-4 
+                                col-md-6 
+                                col-sm-8 
+                                col-xs-10 
+                                col-lg-offset-4
+                                col-md-offset-3 
+                                col-sm-offset-2 
+                                col-xs-offset-1">
+                        <h2 class="text-center">你是不認識</h2>
+                        <p>家將們聽得馬蹄聲，羿並不勒住馬，你得有力量翻起那岩石才能把它不傷損的連根起出。除了天生顢頇的，是自己發昏，因為前途還是不減啟程時的渺茫。哈哈。不但於事無補。那馬便立刻放緩腳步了。</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="text-center slideImg img-responsive">
+                        <img src="img/testimg4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <span class="prev">&laquo;</span>
+            <span class="next">&raquo;</span>
+        </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/slideshow.js"></script>
+
+</body>
+
+</html>

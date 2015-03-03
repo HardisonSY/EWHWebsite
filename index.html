@@ -17,25 +17,70 @@
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
     <style>
+
+        /* Default
+         *     Background
+         *         color: #fff;
+         *     Font
+         *         size: 14px; 
+         *         color: #5e5e5e;      
+         * ============================= */
+
+        body {
+            color: #5e5e5e;
+        }
+
+        ::-moz-selection {
+            background: dodgerblue;
+            color: #f7f7f7;
+        }
+
+        ::selection {
+            background: dodgerblue;
+            color: #f7f7f7;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .navbar-default .navbar-nav > li > a:hover {
+            color: dodgerblue;
+        }
+
+        .navbar-default .navbar-nav >li > a:focus {
+            color: #777;
+        }
+
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:focus {
+            border-radius: 3px;
+            background-color: dodgerblue;
+            color: #f7f7f7;
+        }
+
+        .ewh-logo {
+            display: inline;
+            max-width:95px; 
+            margin-top: -20px; 
+        }
+
         blockquote {
-            /*background: #f9f9f9;*/
-            /*border-left: 10px solid #ccc;*/
             border-left: none;
             margin: 1.5em 10px;
             padding: 0.5em 10px;
             quotes: "\201C""\201D""\2018""\2019";
         }
+
         blockquote:before {
             color: #ccc;
             content: open-quote;
@@ -44,340 +89,476 @@
             margin-right: 0.25em;
             vertical-align: -0.4em;
         }
+
         blockquote p {
             display: inline;
         }
-        /*.icon-syringe {
-            background: url("img/icon/syringe.svg") 50% 50% right no-repeat;
-            padding:0 16px 0 0;
-            white-space:nowrap;
-            background-size: cover;
-            width: 1em;
-               height: 1em;
-        }
-        .icon-medical {
-            background: url("img/icon/medical.svg") 50% 50% right no-repeat;
-            padding:0 16px 0 0;
-            white-space:nowrap;
-               background-size: cover;
-               width: 1em;
-               height: 1em;
-        }*/
-        .img-icon {
-            width: 70%;
-            color: white;
-            margin: 0 auto;
 
+        .img-responsive img {
+            max-width: 100%;
+            padding: 5% 0;
         }
-        .img-icon[src*="repair"] {
-            width: 50%;
+
+        .img-icon-intro {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            width: 18px;
+            height: 18px;
         }
+
+        .img-icon-intro img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -1px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
         .img-iconback {
+            position: relative;
+            display: inline-block;
             width: 120px;
             height: 120px;
             background-color: dodgerblue;
             border-radius: 50%;
         }
-        .valign-parent {
-            display: table;
-            table-layout: fixed;
+
+        .img-icon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
 
-        .valign-child {
-            display:table-cell;
-            vertical-align:middle;
-            text-align:center;
+        .img-icon img {
+            height: 100%;
+            width: 70%;
         }
-        @media screen and (min-width: 970px) {
+
+        img[src*="repair"] {
+            width: 50%;
+        }
+
+        .project-background-img {
+            margin: 10px 0;
+            padding: 80px 0;
+            background-image: url("img/banner-bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #f7f7f7;
+        }
+
+        .project-title {
+            font-size: 50px;
+        }
+
+        .btn-project {
+            margin-top: 40px;
+        }
+
+        #top {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            width: 60px;
+            height: 60px;
+            bottom: 3%;
+            right: 3%;
+            background-color: dodgerblue;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            border-radius: 8px;
+        }
+
+        .top-background-img {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            background-image: url("img/top.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 400px) {
+            .ewh-logo {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:focus {
+                border-radius: 0;
+            }
+
+            .img-responsive img {
+                padding: 5%;
+            }
+
+            #top {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            #about .row .img-responsive img {
+                /* #about 文字區 height - 圖片 height / 2 
+                 * 347 - 249 / 2 = 49 */
+                padding: 49px 0;
+            }
+
+            #wedo .row .img-responsive img {
+                padding: 5%;
+            }
+
+            #goal .row .img-responsive img {
+                /* #goal 文字區 height - 圖片 height / 2 
+                 * 322 - 205 / 2 = 58.5 */
+                padding: 58.5px 0;
+            }
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            #wedo .row .img-responsive img {
+                /* #wedo 文字區 height - 圖片 height / 2 
+                 * 473 - 211 / 2 = 131 */
+                padding: 131px 0;
+            }
+
+            #goal .row .img-responsive img {
+                /* #goal 文字區 height - 圖片 height / 2 
+                 * 322 - 270 / 2 = 26 */
+                padding: 26px 0;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            #wedo .row .img-responsive img {
+                /* #wedo 文字區 height - 圖片 height / 2 
+                 * 433 - 258 / 2 = 87.5 */
+                padding: 87.5px 0;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
             h1 > br {
                 display: none;
             }
-            .vertical-align {
-                display: flex;
-                align-items: center;
-            }
-        }
-        @media screen and (min-width: 768px) {
 
+            .wedo-col .wedo-subtitle {
+                position: relative;
+                height: 52px;
+                margin: 10px 0;
+            }
+
+            .wedo-col .wedo-subtitle h3 {
+                position: absolute;
+                width: 100%;
+                top: 25%;
+                margin: 0;
+            }
+
+            .wedo-col:nth-child(3) .wedo-subtitle h3 {
+                top: 0;
+            }
         }
 
     </style>
 
 </head>
 
-<body>
+<body id="page-top">
 
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">顯示選單列</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img style="max-width:95px; margin-top: -20px" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界衛生工程 中原分會 Engineering World Health at CYCU">
-            </a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">顯示選單列</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Logo -->
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img style="max-width:95px; margin-top: -20px" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界衛生工程 中原分會 Engineering World Health at CYCU">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="#about" class="page-scroll">關於 EWH</a>
+                    </li>
+                    <li>
+                        <a href="#wedo" class="page-scroll">我們在做什麼？</a>
+                    </li>
+                    <li>
+                        <a href="#goal" class="page-scroll">我們的目標</a>
+                    </li>
+                    <li>
+                        <a href="#project" class="page-scroll">研究計畫</a>
+                    </li>
+                    <li>
+                        <a href="#structure" class="page-scroll">組織架構</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#about">關於 EWH</a>
-                </li>
-                <li>
-                    <a href="#wedo">我們在做什麼？</a>
-                </li>
-                <li>
-                    <a href="#goal">我們的目標</a>
-                </li>
-                <li>
-                    <a href="#structure">組織架構</a>
-                </li>
-            </ul>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header -->
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <img class="img-responsive ewh-logo" src="img/Logo/EWH_Logo.png" alt="世界衛生工程 中原分會 Engineering World Health at CYCU">
+                        <h1 style="display: inline;">世界衛生工程 <br><small style="color: white;">中原大學分會</small></h1>
+                        <h3>Engineering World Health at CYCU</h3>
+                        <hr class="intro-divider">
+                        <blockquote>
+                            <p>改善全球醫療狀況，是生物醫學工程師的願景。</p>
+                        </blockquote>
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="#about" class="btn btn-default btn-lg page-scroll">
+                                    <span class="img-icon-intro">
+                                        <img src="img/icon/home.svg" alt="">
+                                    </span>
+                                    <span class="network-name">關於我們</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <!-- /.navbar-collapse -->
+        <!-- /.container -->
+
     </div>
-    <!-- /.container -->
-</nav>
+    <!-- /.intro-header -->
 
-<!-- Header -->
-<div class="intro-header">
-    <div class="container">
+    <!-- Page Content -->
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-message">
-                    <img style="max-width:95px; margin-top: -20px; display: inline;" class="img-responsive" src="img/Logo/EWH_Logo.png" alt="世界衛生工程 中原分會 Engineering World Health at CYCU">
-                    <h1 style="display: inline;">世界衛生工程 <br><small style="color: white;">中原大學分會</small></h1>
-                    <h3>Engineering World Health at CYCU</h3>
-                    <hr class="intro-divider">
+    <div id="about" class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">關於世界衛生工程</h2>
+                    <p class="lead">世界衛生工程 (Engineering World Health, EWH) 是一個非營利的國際組織，致力動員生物醫學工程組織，在醫院服務資源匱乏的開發中國家、社區改善醫療照護品質。</p>
                     <blockquote>
-                        <p>改善全球醫療狀況，是生物醫學工程師的願景。</p>
+                        <p>為了達成創新、國際化、關懷，與自我實現。</p>
                     </blockquote>
-                    <ul class="list-inline intro-social-buttons">
+                </div>
+                <div class="col-sm-6 col-lg-offset-1 img-responsive">
+                    <img src="img/aboutus.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div id="wedo" class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-7 col-md-push-5">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">我們在做什麼？</h2>
+                    <div class="row text-center">
+                        <div class="col-sm-3 wedo-col">
+                            <div class="img-iconback">
+                                <div class="img-icon">
+                                    <img src="./img/icon/education.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="wedo-subtitle">
+                                <h3>教育訓練</h3>
+                            </div>
+                            <p>提供學生機會去學習全球健康議題、釐清問題的能力、發展設計、溝通及團隊合作的技巧，並熟悉其他文化。</p>
+                        </div>
+                        <div class="col-sm-3 wedo-col">
+                            <div class="img-iconback">
+                                <div class="img-icon">
+                                    <img src="./img/icon/repair.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="wedo-subtitle">
+                                <h3>儀器維修</h3>
+                            </div>
+                            <p>協助開發中國家建立自行維修醫療儀器的能力。</p>
+                        </div>
+                        <div class="col-sm-3 wedo-col">
+                            <div class="img-iconback">
+                                <div class="img-icon">
+                                    <img src="./img/icon/global.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="wedo-subtitle">
+                                <h3>溝通能力培養</h3>
+                            </div>
+                            <p>英語寫作、溝通技巧訓練。</p>
+                        </div>
+                        <div class="col-sm-3 wedo-col">
+                            <div class="img-iconback">
+                                <div class="img-icon">
+                                    <img src="./img/icon/medical.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="wedo-subtitle">
+                                <h3>醫療援助</h3>
+                            </div>
+                            <p>動員生物醫學工程組織，到資源不足的國家改善醫療品質。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-pull-7 img-responsive">
+                    <img src="img/wedo.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div id="goal" class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">我們的目標</h2>
+                    <p class="lead">鼓勵參加此團體的學生不只是專注於理論的學術研究，更要留意具實用性的創新，同時訓練學生要有服務社會的使命感，並能將在校所學的知識從科學概念應用到真實世界。</p>
+                    <blockquote>
+                        <p>助人越多，利己越多。</p>
+                    </blockquote>
+                </div>
+                <div class="col-sm-6 col-lg-offset-1 img-responsive">
+                    <img src="img/testimg3.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div id="project" class="content-section-b">
+        
+        <div class="project-background-img">
+            <div class="container text-center">
+                <h1 class="project-title">Project title</h1>
+                <h4 class="project-description">Smart Phone based Tocodynamometer 
+</h4>
+                <a href="project.html" class="btn btn-default btn-md btn-project">Learn more</a>
+            </div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /#project -->
+
+    <div id="structure" class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-7 col-sm-6 col-lg-push-5 col-sm-push-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">組織架構</h2>
+                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                </div>
+                <div class="col-lg-5 col-sm-6 col-lg-pull-7 col-sm-pull-6 img-responsive">
+                    <img src="img/testimg2.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div id="top">
+
+        <a href="#" class="top-background-img"></a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
                         <li>
-                            <a href="#" class="btn btn-default btn-lg">
-                                	<span class="glyphicon glyphicon-home">  
-                                	</span> <span class="network-name">關於我們</span></a>
+                            <a href="#">Home</a>
                         </li>
-                        <!-- <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Facebook 粉絲專頁</span></a>
-                        </li> -->
-                        <!-- <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li> -->
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
                     </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Engineering World Health at 2014. All Rights Reserved</p>
                 </div>
             </div>
         </div>
 
-    </div>
-    <!-- /.container -->
+    </footer>
 
-</div>
-<!-- /.intro-header -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-<!-- Page Content -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-<div  id="about" class="content-section-a">
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">關於世界衛生工程</h2>
-                <p class="lead">世界衛生工程 (Engineering World Health, EWH) 是一個非營利的國際組織，致力動員生物醫學工程組織，在醫院服務資源匱乏的開發中國家、社區改善醫療照護品質。</p>
-                <blockquote>
-                    <p>為了達成創新、國際化、關懷，與自我實現。</p>
-                </blockquote>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="img/aboutus.png" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-
-<div id="wedo" class="content-section-b">
-
-    <div class="container">
-
-        <div class="row vertical-align">
-            <div class="col-md-7 col-md-offset-1 col-md-push-4">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">我們在做什麼？</h2>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="img-iconback valign-parent">
-                            <div class="valign-child">
-                                <img class="img-responsive img-icon" src="./img/icon/education.svg" alt=""/>
-                            </div>
-                        </div>
-                        <h3>教育訓練</h3>
-                        <p>提供學生機會去學習全球健康議題、釐清問題的能力、發展設計、溝通及團隊合作的技巧，並熟悉其他文化。</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="img-iconback valign-parent">
-                            <div class="valign-child">
-                                <img class="img-responsive img-icon" src="./img/icon/repair.svg" alt=""/>
-                            </div>
-                        </div>
-                        <h3>儀器維修</h3>
-                        <p>協助開發中國家建立自行維修醫療儀器的能力。</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="img-iconback valign-parent">
-                            <div class="valign-child">
-                                <img class="img-responsive img-icon" src="./img/icon/global.svg" alt=""/>
-                            </div>
-                        </div>
-                        <h3>溝通能力培養</h3>
-                        <p>英語寫作、溝通技巧訓練。</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="img-iconback valign-parent">
-                            <div class="valign-child">
-                                <img class="img-responsive img-icon" src="./img/icon/medical.svg" alt=""/>
-                            </div>
-                        </div>
-                        <h3>醫療援助</h3>
-                        <p>動員生物醫學工程組織，到資源不足的國家改善醫療品質。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-md-pull-8">
-                <img class="img-responsive" src="img/wedo.jpg" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-
-<div id="goal" class="content-section-a">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">我們的目標</h2>
-                <p class="lead">鼓勵參加此團體的學生不只是專注於理論的學術研究，更要留意具實用性的創新，同時訓練學生要有服務社會的使命感，並能將在校所學的知識從科學概念應用到真實世界。</p>
-                <blockquote>
-                    <p>助人越多，利己越多。</p>
-                </blockquote>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="img/phones.png" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-
-<div id="structure" class="content-section-b">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">組織架構</h2>
-                <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-            </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                <img class="img-responsive" src="img/dog.png" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-
-<div class="banner">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-6">
-                <h2>Connect to Start Bootstrap:</h2>
-            </div>
-            <div class="col-lg-6">
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.banner -->
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-inline">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">Copyright &copy; Engineering World Health at 2014. All Rights Reserved</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/nav-scrollspy.js"></script>
+    <script src="js/totop.js"></script>
 
 </body>
 
