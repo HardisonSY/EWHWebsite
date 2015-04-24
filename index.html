@@ -16,6 +16,8 @@
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,254 +26,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <style>
-
-        /* Default
-         *     Background
-         *         color: #fff;
-         *     Font
-         *         size: 14px; 
-         *         color: #5e5e5e;      
-         * ============================= */
-
-        body {
-            color: #5e5e5e;
-        }
-
-        ::-moz-selection {
-            background: dodgerblue;
-            color: #f7f7f7;
-        }
-
-        ::selection {
-            background: dodgerblue;
-            color: #f7f7f7;
-        }
-
-        .navbar-default .navbar-nav > li > a {
-            margin: 10px 0;
-            padding: 10px;
-        }
-
-        .navbar-default .navbar-nav > li > a:hover {
-            color: dodgerblue;
-        }
-
-        .navbar-default .navbar-nav >li > a:focus {
-            color: #777;
-        }
-
-        .navbar-default .navbar-nav > .active > a,
-        .navbar-default .navbar-nav > .active > a:focus {
-            border-radius: 3px;
-            background-color: dodgerblue;
-            color: #f7f7f7;
-        }
-
-        .ewh-logo {
-            display: inline;
-            max-width:95px; 
-            margin-top: -20px; 
-        }
-
-        blockquote {
-            border-left: none;
-            margin: 1.5em 10px;
-            padding: 0.5em 10px;
-            quotes: "\201C""\201D""\2018""\2019";
-        }
-
-        blockquote:before {
-            color: #ccc;
-            content: open-quote;
-            font-size: 4em;
-            line-height: 0.1em;
-            margin-right: 0.25em;
-            vertical-align: -0.4em;
-        }
-
-        blockquote p {
-            display: inline;
-        }
-
-        .img-responsive img {
-            max-width: 100%;
-            padding: 5% 0;
-        }
-
-        .img-icon-intro {
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
-            width: 18px;
-            height: 18px;
-        }
-
-        .img-icon-intro img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: -1px;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-
-        .img-iconback {
-            position: relative;
-            display: inline-block;
-            width: 120px;
-            height: 120px;
-            background-color: dodgerblue;
-            border-radius: 50%;
-        }
-
-        .img-icon {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .img-icon img {
-            height: 100%;
-            width: 70%;
-        }
-
-        img[src*="repair"] {
-            width: 50%;
-        }
-
-        .project-background-img {
-            margin: 10px 0;
-            padding: 80px 0;
-            background-image: url("img/banner-bg.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: #f7f7f7;
-        }
-
-        .project-title {
-            font-size: 50px;
-        }
-
-        .btn-project {
-            margin-top: 40px;
-        }
-
-        #top {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            width: 60px;
-            height: 60px;
-            bottom: 3%;
-            right: 3%;
-            background-color: dodgerblue;
-            opacity: 0.7;
-            filter: alpha(opacity=70);
-            border-radius: 8px;
-        }
-
-        .top-background-img {
-            display: none;
-            position: absolute;
-            z-index: 2;
-            background-image: url("img/top.svg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        @media screen and (max-width: 400px) {
-            .ewh-logo {
-                display: none;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .navbar-default .navbar-nav > .active > a,
-            .navbar-default .navbar-nav > .active > a:focus {
-                border-radius: 0;
-            }
-
-            .img-responsive img {
-                padding: 5%;
-            }
-
-            #top {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
-        @media screen and (min-width: 768px) and (max-width: 992px) {
-            #about .row .img-responsive img {
-                /* #about 文字區 height - 圖片 height / 2 
-                 * 347 - 249 / 2 = 49 */
-                padding: 49px 0;
-            }
-
-            #wedo .row .img-responsive img {
-                padding: 5%;
-            }
-
-            #goal .row .img-responsive img {
-                /* #goal 文字區 height - 圖片 height / 2 
-                 * 322 - 205 / 2 = 58.5 */
-                padding: 58.5px 0;
-            }
-        }
-
-        @media screen and (min-width: 992px) and (max-width: 1200px) {
-            #wedo .row .img-responsive img {
-                /* #wedo 文字區 height - 圖片 height / 2 
-                 * 473 - 211 / 2 = 131 */
-                padding: 131px 0;
-            }
-
-            #goal .row .img-responsive img {
-                /* #goal 文字區 height - 圖片 height / 2 
-                 * 322 - 270 / 2 = 26 */
-                padding: 26px 0;
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-            #wedo .row .img-responsive img {
-                /* #wedo 文字區 height - 圖片 height / 2 
-                 * 433 - 258 / 2 = 87.5 */
-                padding: 87.5px 0;
-            }
-        }
-
-        @media screen and (min-width: 992px) {
-            h1 > br {
-                display: none;
-            }
-
-            .wedo-col .wedo-subtitle {
-                position: relative;
-                height: 52px;
-                margin: 10px 0;
-            }
-
-            .wedo-col .wedo-subtitle h3 {
-                position: absolute;
-                width: 100%;
-                top: 25%;
-                margin: 0;
-            }
-
-            .wedo-col:nth-child(3) .wedo-subtitle h3 {
-                top: 0;
-            }
-        }
-
-    </style>
+ 
 
 </head>
 
@@ -478,7 +233,7 @@
         
         <div class="project-background-img">
             <div class="container text-center">
-                <h1 class="project-title">Project title</h1>
+                <h1 class="project-title">帛琉計畫</h1>
                 <h4 class="project-description">Smart Phone based Tocodynamometer 
 </h4>
                 <a href="project.html" class="btn btn-default btn-md btn-project">Learn more</a>
@@ -525,19 +280,27 @@
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#">首頁</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#about">About</a>
+                            <a href="#about">關於EWH</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#services">Services</a>
+                            <a href="#wedo">我們在做什麼</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="#goal">組織目標</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#project">帛琉計畫</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#structure">組織架構</a>
                         </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Engineering World Health at 2014. All Rights Reserved</p>

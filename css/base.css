@@ -1,0 +1,22 @@
+/* Default
+ *     Background
+ *         color: #fff;
+ *     Font
+ *         size: 14px; 
+ *         color: #5e5e5e;      
+ * ============================= */
+
+body {
+color: #5e5e5e;
+}
+
+::-moz-selection {
+background: dodgerblue;
+color: #f7f7f7;
+}
+
+::selection {
+background: dodgerblue;
+color: #f7f7f7;
+}
+
